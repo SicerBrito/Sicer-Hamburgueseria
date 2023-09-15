@@ -11,6 +11,11 @@ namespace Persistencia.Data;
         public DbSet<Usuario> ? Usuarios { get; set; } = null!;
         public DbSet<Rol> ? Roles { get; set; } = null!;
         public DbSet<UsuarioRol> ? UsuarioRoles { get; set; } = null!;
+        public DbSet<Categoria> ? Categorias { get; set; } = null!;
+        public DbSet<Chef> ? Chefs { get; set; } = null!;
+        public DbSet<Hamburgesa> ? Hamburgesas { get; set; } = null!;
+        public DbSet<HamburgesaIngrediente> ? HamburgesaIngredientes { get; set; } = null!;
+        public DbSet<Ingrediente> ? Ingredientes { get; set; } = null!;
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder){
