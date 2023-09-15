@@ -12,14 +12,22 @@ namespace Aplicacion.UnitOfWork;
 
 
 
-        RolRepository ? _Rol;
-        UsuarioRepository ? _Usuario;
+        private RolRepository ? _Rol;
+        private UsuarioRepository ? _Usuario;
+        private CategoriaRepository ? _Categoria;
+        private ChefRepository ? _Chef;
+        private HamburgesaRepository ? _Hamburgesa;
+        private IngredienteRepository ? _Ingrediente;
 
 
 
         
         public IRol Roles => _Rol ??= new RolRepository(_Context!);
         public IUsuario Usuarios => _Usuario ??= new UsuarioRepository(_Context!);
+        public ICategoria Categorias => _Categoria ??= new CategoriaRepository(_Context!);
+        public IChef Chefs => _Chef ??= new ChefRepository(_Context!);
+        public IHamburgesa Hamburgesas => _Hamburgesa ??= new HamburgesaRepository(_Context!);
+        public IIngrediente Ingredientes => _Ingrediente ??= new IngredienteRepository(_Context!);
 
 
 
@@ -33,3 +41,5 @@ namespace Aplicacion.UnitOfWork;
             return _Context!.SaveChangesAsync();
         }
     }
+
+

@@ -8,6 +8,7 @@ public class CategoriaConfiguration : IEntityTypeConfiguration<Categoria>
 {
     public void Configure(EntityTypeBuilder<Categoria> builder)
     {
+        builder.ToTable("Categoria");
         builder.Property(p => p.Id)
             .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
             .HasColumnName("IdCategoria")

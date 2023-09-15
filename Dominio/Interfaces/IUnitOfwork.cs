@@ -3,7 +3,10 @@ namespace Dominio.Interfaces;
         
         IUsuario Usuarios {get;}
         IRol Roles {get;}
-        IEjemploInterface ? EjemploInterfaces { get;}
+        ICategoria ? Categorias { get;}
+        IChef ? Chefs { get; }
+        IHamburgesa ? Hamburgesas { get; }
+        IIngrediente ? Ingredientes { get; }
         Task<int> SaveAsync();
         
     }

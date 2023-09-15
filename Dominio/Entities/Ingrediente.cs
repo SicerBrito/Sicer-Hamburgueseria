@@ -6,5 +6,5 @@ namespace Dominio.Entities;
         public int PrecioIngrediente { get; set; }
         public int StockIngrediente { get; set; }
         public ICollection<HamburgesaIngrediente> ? HamburgesaIngredientes { get; set; }
-
-    }
+    public int Stock { get; set; }
+}

@@ -24,8 +24,7 @@ public class HamburgesaConfiguration : IEntityTypeConfiguration<Hamburgesa>
 
         builder.Property(p => p.CategoriaId)
             .HasColumnName("CategoriaId")
-            .HasColumnType("varchar")
-            .HasMaxLength(25)
+            .HasColumnType("int")
             .IsRequired();
 
         builder.HasOne(p => p.Categorias)
@@ -39,8 +38,7 @@ public class HamburgesaConfiguration : IEntityTypeConfiguration<Hamburgesa>
 
         builder.Property(p => p.ChefId)
             .HasColumnName("ChefId")
-            .HasColumnType("varchar")
-            .HasMaxLength(50)
+            .HasColumnType("int")
             .IsRequired();
 
         builder.HasOne(p => p.Chefs)
